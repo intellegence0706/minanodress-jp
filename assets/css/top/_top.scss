@@ -1,0 +1,536 @@
+#top {
+  .p-fv {
+    position: relative;
+
+    .__fv-ctn {
+      position: absolute;
+      right: 40px;
+      bottom: 40px;
+      font-size: 61px;
+      font-weight: 700;
+      font-family: "Shippori Mincho B1", serif;
+      color: #fafafa;
+      text-shadow: 0px 0px 15px #093417;
+      text-align: end;
+      @include media-sp {
+        font-size: 28px;
+      }
+    }
+  }
+  .p-collection {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-right: 16px;
+    padding-left: 16px;
+    .__container {
+      padding-top: 104px;
+      @include media-sp {
+        padding-top: 64px;
+      }
+      .__collection-ttl {
+        font-size: 39px;
+        font-weight: 700;
+        color: #2d2a29;
+        text-align: center;
+        @include media-sp {
+          font-size: 30px;
+        }
+        // font-family: $font-gothic;
+      }
+      .__collection-main {
+        padding-top: 60px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 32px;
+        @include media-sp {
+          padding-top: 48px;
+          flex-direction: column;
+          gap: 24px;
+        }
+        .main-dress {
+          position: relative;
+          &::after {
+            content: "ウェディングドレス";
+            position: absolute;
+            font-size: 31px;
+            font-weight: 700;
+            color: #fafafa;
+            text-shadow: 0px 0px 8px #00000050;
+            left: 32px;
+            bottom: 32px;
+            @include media-sp {
+              font-size: 25px;
+            }
+          }
+          &:hover {
+            figure {
+              img {
+                transform: scale(1.2);
+              }
+            }
+          }
+          figure {
+            max-width: 544px;
+            overflow: hidden;
+            border-radius: 15px;
+            @include media-sp {
+              border-radius: 10px;
+            }
+            img {
+              transition: all 0.3s;
+            }
+          }
+        }
+
+        .__collection-items {
+          display: grid;
+          grid-template-columns: 1fr 1fr;
+          gap: 32px;
+          @include media-sp {
+            gap: 24px;
+          }
+          .__collection-item {
+            position: relative;
+            &:first-child {
+              &::after {
+                content: "カラードレス";
+              }
+            }
+            &:nth-child(2) {
+              &::after {
+                content: "レンタルドレス";
+              }
+            }
+            &:nth-child(3) {
+              &::after {
+                content: "タキシード";
+              }
+            }
+            &:nth-child(4) {
+              &::after {
+                content: "シューズ";
+              }
+            }
+
+            &::after {
+              position: absolute;
+              font-size: 20px;
+              font-weight: 700;
+              color: #fafafa;
+              text-shadow: 0px 0px 8px #00000050;
+              left: 16px;
+              bottom: 16px;
+            }
+            &:hover {
+              figure {
+                img {
+                  transform: scale(1.2);
+                }
+              }
+            }
+            figure {
+              max-width: 256px;
+              overflow: hidden;
+              border-radius: 15px;
+              @include media-sp {
+                border-radius: 10px;
+              }
+              img {
+                transition: all 0.3s;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .p-popular {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-right: 16px;
+    padding-left: 16px;
+    .__container {
+      padding-top: 104px;
+      @include media-sp {
+        padding-top: 64px;
+      }
+      .__popular-ttl {
+        font-size: 39px;
+        font-weight: 700;
+        color: #2d2a29;
+        text-align: center;
+        @include media-sp {
+          font-size: 28px;
+        }
+      }
+      .__popular-main {
+        padding-top: 64px;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        gap: 32px;
+        @include media-sp {
+          padding-top: 48px;
+          gap: 24px;
+          grid-template-columns: 1fr 1fr;
+        }
+      }
+
+      .popular-btn {
+        margin-top: 64px;
+        margin-right: auto;
+        margin-left: auto;
+        @include media-sp {
+          margin-top: 48px;
+        }
+      }
+    }
+  }
+
+  .p-trial {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-right: 16px;
+    padding-left: 16px;
+    .__container {
+      padding-top: 104px;
+      @include media-sp {
+        padding-top: 64px;
+      }
+      .__trial-ttl {
+        font-size: 29px;
+        font-weight: 700;
+        color: #000000;
+        text-align: center;
+        @include media-sp {
+          font-size: 28px;
+        }
+      }
+      .__trial-main {
+        padding-top: 64px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 32px;
+        flex-direction: column;
+        @include media-sp {
+          padding-top: 48px;
+          gap: 48px;
+        }
+        .img-main {
+          position: relative;
+          width: 100%;
+          .__trial-ctn {
+            position: absolute;
+            bottom: 32px;
+            left: 32px;
+            @include media-sp {
+              bottom: 16px;
+              left: 16px;
+            }
+
+            h4 {
+              font-size: 31px;
+              color: #fafafa;
+              font-weight: 700;
+              text-shadow: 0px 0px 8px #000050;
+              @include media-sp {
+                font-size: 28px;
+              }
+            }
+
+            p {
+              font-size: 16px;
+              color: #fafafa;
+              font-weight: 700;
+              text-shadow: 0px 0px 8px #000050;
+              max-width: 255px;
+            }
+          }
+          .__trial-btn {
+            position: absolute;
+            bottom: 32px;
+            right: 32px;
+            @include media-sp {
+              bottom: -30px;
+              right: 0;
+            }
+          }
+        }
+
+        .img-items {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          gap: 32px;
+          @include media-sp {
+            gap: 16px;
+          }
+          .img-item {
+            position: relative;
+            .__trial-ctn {
+              position: absolute;
+              bottom: 32px;
+              left: 32px;
+              @include media-sp {
+                bottom: 32px;
+                left: 24px;
+              }
+
+              h4 {
+                font-size: 31px;
+                color: #fafafa;
+                font-weight: 700;
+                text-shadow: 0px 0px 8px #000050;
+                @include media-sp {
+                  font-size: 16px;
+                }
+              }
+
+              p {
+                font-size: 16px;
+                color: #fafafa;
+                font-weight: 700;
+                text-shadow: 0px 0px 8px #000050;
+                max-width: 255px;
+              }
+            }
+            .__trial-btn {
+              position: absolute;
+              bottom: 32px;
+              right: 32px;
+              @include media-sp {
+                bottom: -30px;
+                right: unset;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .p-campaign {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-right: 16px;
+    padding-left: 16px;
+    .__container {
+      padding-top: 104px;
+      @include media-sp {
+        padding-top: 84px;
+      }
+      .__campaign-ttl {
+        font-size: 39px;
+        font-weight: 700;
+        color: #2d2a29;
+        text-align: center;
+        @include media-sp {
+          font-size: 28px;
+        }
+      }
+      .__campaign-main {
+        padding-top: 64px;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 32px;
+        @include media-sp {
+          padding-top: 48px;
+          gap: 24px;
+          grid-template-columns: 1fr;
+        }
+        .__campaign-item {
+          position: relative;
+          &:first-child {
+            &::after {
+              content: "バナータイトル";
+            }
+          }
+          &:nth-child(2) {
+            &::after {
+              content: "バナータイトル";
+            }
+          }
+          &:nth-child(3) {
+            &::after {
+              content: "バナータイトル";
+            }
+          }
+          &:nth-child(4) {
+            &::after {
+              content: "バナータイトル";
+            }
+          }
+          &::after {
+            position: absolute;
+            bottom: 16px;
+            right: 16px;
+            font-size: 20px;
+            font-weight: 700;
+            color: #fafafa;
+            text-shadow: 0 0 8px #00000050;
+            letter-spacing: 0.04em;
+          }
+        }
+      }
+    }
+  }
+
+  .p-blog {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-right: 16px;
+    padding-left: 16px;
+    .container {
+      padding-top: 104px;
+      max-width: 1290px;
+      width: 100%;
+      position: relative;
+      @include media-sp {
+        padding-top: 64px;
+      }
+      .__blog-ttl {
+        font-size: 39px;
+        font-weight: 700;
+        color: #2d2a29;
+        text-align: center;
+      }
+      .__blog-slider-controll {
+        position: absolute;
+        width: 40px;
+        height: 40px;
+        background-color: #fafafa75;
+        border-radius: 100px;
+        border: 1px solid #2d2a29;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        top: 50%;
+        right: 0%;
+        &:hover {
+          opacity: 0.8;
+        }
+      }
+      .__blog-main {
+        padding-top: 64px;
+        display: flex;
+        gap: 32px;
+        transform: translateX(7%);
+        position: relative;
+
+        @include media-sp {
+          padding-top: 48px;
+          transform: unset;
+        }
+        .__blog-item {
+          position: relative;
+          transform: translateX(-172%);
+          @include media-sp {
+            transform: unset;
+          }
+          figure {
+            padding-right: 16px;
+            padding-left: 16px;
+            @include media-sp {
+              padding-right: 0;
+              padding-left: 0;
+            }
+          }
+          p {
+            padding-left: 16px;
+            padding-top: 16px;
+            font-size: 20px;
+            font-weight: 700;
+            color: #000000;
+          }
+        }
+      }
+
+      .__blog-btn {
+        margin-top: 64px;
+        margin-right: 0;
+        margin-left: auto;
+      }
+    }
+  }
+
+  .p-instar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-right: 16px;
+    padding-left: 16px;
+    .__container {
+      padding-top: 104px;
+      @include media-sp {
+        padding-top: 64px;
+        padding-bottom: 64px;
+      }
+      padding-bottom: 104px;
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+      gap: 64px;
+      @include media-sp {
+        flex-direction: column;
+        gap: 24px;
+      }
+      .__banners {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 24px;
+        @include media-sp {
+          display: grid;
+          grid-template-columns: 1fr 1fr;
+          gap: 16px;
+        }
+        .__banner-item {
+          &:hover {
+            figure {
+              img {
+                transform: scale(1.1);
+              }
+            }
+          }
+        }
+        figure {
+          max-width: 207px;
+          width: 100%;
+          overflow: hidden;
+          img {
+            transition: all 0.3s;
+          }
+        }
+      }
+      .__instar-main {
+        .__instar-ctn {
+          .ctn_ttl {
+            font-size: 25px;
+            font-weight: 700;
+            color: #2d2a29;
+          }
+          .ctn_desc {
+            padding-top: 16px;
+            font-size: 16px;
+            font-weight: 500;
+            color: #2d2a29;
+          }
+        }
+        .__instar-btn {
+          margin-top: 40px;
+          @include media-sp {
+            margin-top: 24px;
+          }
+        }
+      }
+    }
+  }
+}

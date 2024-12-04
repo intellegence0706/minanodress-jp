@@ -1,0 +1,89 @@
+/**
+* @file _common.scss
+**/
+
+.is-pc {
+  display: block;
+  @include media-sp {
+    display: none !important;
+  }
+}
+
+.is-sp {
+  display: none !important;
+  @include media-sp {
+    display: block !important;
+  }
+}
+
+.l-common {
+  width: 960px;
+  @include media-pc {
+    width: 960rem;
+  }
+  @include media-sp {
+    display: block;
+  }
+}
+.__container {
+  max-width: 1120px;
+  width: 100%;
+}
+
+.no-display {
+  display: none;
+}
+
+.flex {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.open-spmenu {
+  transform: translateX(-13%) !important;
+}
+
+.search {
+  padding: 8.5px 44px;
+  border: 1px solid #2d2a29;
+  border-radius: 8px;
+  font-family: "Noto Sans JP";
+  position: relative;
+  display: flex;
+  @include media-sp {
+    padding: 6.5px 41px;
+    border: 1px solid #2d2a29;
+    border-radius: 5px;
+    font-family: "Noto Sans JP";
+    position: relative;
+  }
+
+  &::before {
+    content: "";
+    width: 20px;
+    height: 20px;
+    background-image: url(../img/header/img-search.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    position: absolute;
+    left: 12px; /* Adjust left to position the icon */
+    top: 50%; /* Center the icon vertically */
+    transform: translateY(-50%); /* Adjust for exact vertical centering */
+  }
+
+  input {
+    font-size: 16px;
+    font-weight: 500;
+    width: 100%;
+    height: 100%;
+    @include media-sp {
+      font-size: 13px;
+    }
+  }
+}
+
+.gothic {
+  font-family: "Zen Maru Gothic", serif;
+}
